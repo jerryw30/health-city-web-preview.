@@ -1,0 +1,280 @@
+
+/* FINAL inner-page refinements.
+   No content restructuring. No narrow image columns. No footer-like CTA. */
+
+.source-content-page.inner-refined-page .source-hero {
+  min-height: 0 !important;
+}
+.source-content-page.inner-refined-page .source-hero-copy {
+  padding-top: 46px !important;
+  padding-bottom: 46px !important;
+}
+.source-content-page.inner-refined-page .source-hero-media {
+  min-height: 0 !important;
+  height: 430px !important;
+}
+.source-content-page.inner-refined-page .source-hero-media img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: 50% 28% !important;
+}
+
+/* Let copy determine section height. */
+.source-content-page.inner-refined-page .source-section {
+  padding-top: clamp(48px, 5vw, 68px) !important;
+  padding-bottom: clamp(48px, 5vw, 68px) !important;
+}
+.source-content-page.inner-refined-page .source-section-inner {
+  width: min(calc(100% - (var(--gutter) * 2)), 1100px) !important;
+}
+
+/* Document images stay FULL WIDTH in their content section.
+   Only height is controlled. Diagrams use contain so nothing important is cropped. */
+.source-content-page.inner-refined-page .source-figure,
+.source-content-page.inner-refined-page .source-figure-portrait {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 28px 0 12px !important;
+  background: var(--paper);
+}
+.source-content-page.inner-refined-page .source-figure img,
+.source-content-page.inner-refined-page .source-figure-wide img,
+.source-content-page.inner-refined-page .source-figure-portrait img {
+  display: block !important;
+  width: 100% !important;
+  height: 390px !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  object-position: center !important;
+}
+
+/* Real FAQ accordion without changing source wording. */
+.source-content-page.inner-refined-page .faq-refined-section .source-section-inner {
+  max-width: 980px !important;
+}
+.source-content-page.inner-refined-page .refined-faq-item {
+  border-top: 1px solid var(--line);
+}
+.source-content-page.inner-refined-page .refined-faq-item:last-child {
+  border-bottom: 1px solid var(--line);
+}
+.source-content-page.inner-refined-page .refined-faq-toggle {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 36px;
+  gap: 18px;
+  align-items: center;
+  padding: 22px 0;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+}
+.source-content-page.inner-refined-page .refined-faq-question {
+  font-family: var(--display);
+  font-size: clamp(1.12rem, 1.65vw, 1.34rem);
+  line-height: 1.35;
+}
+.source-content-page.inner-refined-page .refined-faq-symbol {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  font-size: 1.25rem;
+}
+.source-content-page.inner-refined-page .refined-faq-answer {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition: grid-template-rows .3s ease, opacity .22s ease;
+}
+.source-content-page.inner-refined-page .refined-faq-answer > div {
+  overflow: hidden;
+}
+.source-content-page.inner-refined-page .refined-faq-answer p {
+  max-width: 900px !important;
+  margin: 0 !important;
+  padding: 0 52px 22px 0;
+}
+.source-content-page.inner-refined-page .refined-faq-item.is-open .refined-faq-answer {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+
+/* The closing booking section remains part of the PAGE, visually separate from the footer. */
+.source-content-page.inner-refined-page .final-booking-section {
+  background: var(--ivory) !important;
+  border-top: 1px solid var(--line) !important;
+  border-bottom: 1px solid var(--line) !important;
+  padding-top: clamp(52px, 5vw, 70px) !important;
+  padding-bottom: clamp(52px, 5vw, 70px) !important;
+}
+.source-content-page.inner-refined-page .final-booking-section .source-section-inner {
+  width: min(calc(100% - (var(--gutter) * 2)), 1020px) !important;
+}
+.source-content-page.inner-refined-page .final-booking-section h2 {
+  max-width: 840px !important;
+}
+.source-content-page.inner-refined-page .final-booking-section p {
+  max-width: 760px !important;
+}
+
+@media (max-width: 980px) {
+  .source-content-page.inner-refined-page .source-hero-media {
+    height: 400px !important;
+  }
+  .source-content-page.inner-refined-page .source-figure img,
+  .source-content-page.inner-refined-page .source-figure-wide img,
+  .source-content-page.inner-refined-page .source-figure-portrait img {
+    height: 350px !important;
+  }
+}
+
+@media (max-width: 680px) {
+  .source-content-page.inner-refined-page .source-hero {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  .source-content-page.inner-refined-page .source-hero-copy {
+    padding-top: 38px !important;
+    padding-bottom: 38px !important;
+  }
+  .source-content-page.inner-refined-page .source-hero-media {
+    width: 100% !important;
+    height: min(84vw, 400px) !important;
+  }
+  .source-content-page.inner-refined-page .source-section {
+    padding-top: 46px !important;
+    padding-bottom: 46px !important;
+  }
+  .source-content-page.inner-refined-page .source-figure img,
+  .source-content-page.inner-refined-page .source-figure-wide img,
+  .source-content-page.inner-refined-page .source-figure-portrait img {
+    height: min(76vw, 330px) !important;
+  }
+  .source-content-page.inner-refined-page .refined-faq-toggle {
+    grid-template-columns: 1fr 32px;
+    gap: 14px;
+    padding: 19px 0;
+  }
+  .source-content-page.inner-refined-page .refined-faq-answer p {
+    padding-right: 0;
+    padding-bottom: 20px;
+  }
+}
+
+
+/* FINAL FULL-HEIGHT IMAGE CORRECTIONS */
+
+/* Hero photography fills the complete hero row height, just like the approved Home treatment. */
+.source-content-page.inner-refined-page .source-hero {
+  min-height: 0 !important;
+  align-items: stretch !important;
+}
+.source-content-page.inner-refined-page .source-hero-copy {
+  min-width: 0 !important;
+  padding-top: 44px !important;
+  padding-bottom: 44px !important;
+}
+.source-content-page.inner-refined-page .source-hero-media {
+  position: relative !important;
+  align-self: stretch !important;
+  min-height: 0 !important;
+  height: auto !important;
+  overflow: hidden !important;
+}
+.source-content-page.inner-refined-page .source-hero-media img {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: 50% 28% !important;
+}
+
+/* Keep the content container wide. Text remains readable, but images can use the full section width. */
+.source-content-page.inner-refined-page .source-section-inner {
+  width: min(calc(100% - (var(--gutter) * 2)), var(--container)) !important;
+}
+
+/* Images remain FULL WIDTH. Only their height is controlled.
+   Photographic source images use cover, not a narrow/small contain box. */
+.source-content-page.inner-refined-page .source-figure,
+.source-content-page.inner-refined-page .source-figure-portrait {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 28px 0 8px !important;
+  overflow: hidden !important;
+}
+.source-content-page.inner-refined-page .source-figure img,
+.source-content-page.inner-refined-page .source-figure-wide img,
+.source-content-page.inner-refined-page .source-figure-portrait img {
+  display: block !important;
+  width: 100% !important;
+  height: clamp(300px,31vw,430px) !important;
+  max-height: none !important;
+  object-fit: cover !important;
+  object-position: center !important;
+}
+
+/* Clinical diagrams/graphics must stay fully visible while still using the full available width. */
+.source-content-page.inner-refined-page .source-figure img[src*="source-hypothyroid"],
+.source-content-page.inner-refined-page .source-figure img[src*="source-hormone-testing"],
+.source-content-page.inner-refined-page .source-figure img[src*="source-organic-acids"],
+.source-content-page.inner-refined-page .source-figure img[src*="source-personalized-nutrition"],
+.source-content-page.inner-refined-page .source-figure img[src*="source-gut-microbiome"] {
+  object-fit: contain !important;
+  background: var(--paper) !important;
+}
+
+/* Natural section heights and tighter vertical rhythm. */
+.source-content-page.inner-refined-page .source-section {
+  padding-top: clamp(46px,4.8vw,66px) !important;
+  padding-bottom: clamp(46px,4.8vw,66px) !important;
+}
+
+/* Final booking section is clearly part of the page, never visually fused with the footer. */
+.source-content-page.inner-refined-page .final-booking-section {
+  padding-top: clamp(42px,4.5vw,58px) !important;
+  padding-bottom: clamp(42px,4.5vw,58px) !important;
+  background: var(--stone) !important;
+  border-top: 1px solid var(--line) !important;
+  border-bottom: 1px solid var(--line) !important;
+}
+.source-content-page.inner-refined-page .final-booking-section .source-section-inner {
+  width: min(calc(100% - (var(--gutter) * 2)), 1080px) !important;
+}
+.source-content-page.inner-refined-page .final-booking-section .button {
+  max-width: 100% !important;
+  white-space: normal !important;
+}
+
+@media (max-width: 760px) {
+  .source-content-page.inner-refined-page .source-hero {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  .source-content-page.inner-refined-page .source-hero-media {
+    width: 100% !important;
+    height: min(82vw,390px) !important;
+    min-height: min(82vw,390px) !important;
+  }
+  .source-content-page.inner-refined-page .source-hero-media img {
+    position: absolute !important;
+  }
+  .source-content-page.inner-refined-page .source-figure img,
+  .source-content-page.inner-refined-page .source-figure-wide img,
+  .source-content-page.inner-refined-page .source-figure-portrait img {
+    height: min(72vw,330px) !important;
+  }
+  .source-content-page.inner-refined-page .source-section,
+  .source-content-page.inner-refined-page .final-booking-section {
+    padding-top: 42px !important;
+    padding-bottom: 42px !important;
+  }
+}

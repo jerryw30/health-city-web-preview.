@@ -1,0 +1,695 @@
+
+/* Health and the City — Clinical Pages V3
+   Full-width sections, one consistent content width, no boxed section wrappers. */
+
+.clinical-v3-page .clinical-v3-main,
+.clinical-gap-page main {
+  overflow: hidden;
+}
+
+.clinical-v3-page .v3-container {
+  width: min(calc(100% - (var(--gutter) * 2)), 1180px);
+  margin-inline: auto;
+}
+
+/* HERO */
+.clinical-v3-page .v3-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(390px, .92fr);
+  align-items: stretch;
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+}
+.clinical-v3-page .v3-hero-copy {
+  display: flex;
+  align-items: center;
+}
+.clinical-v3-page .v3-hero-inner {
+  padding-top: clamp(48px, 5.3vw, 72px);
+  padding-bottom: clamp(48px, 5.3vw, 72px);
+}
+.clinical-v3-page .v3-hero .breadcrumbs {
+  margin-bottom: 28px;
+}
+.clinical-v3-page .v3-hero h1 {
+  max-width: 760px;
+  margin: 10px 0 0;
+  font-size: clamp(2.7rem, 4.25vw, 4.35rem);
+  line-height: 1.01;
+  letter-spacing: -.026em;
+}
+.clinical-v3-page .v3-hero-image {
+  position: relative;
+  min-height: 470px;
+  overflow: hidden;
+}
+.clinical-v3-page .v3-hero-image img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 28%;
+}
+
+/* FULL-WIDTH SECTION BANDS */
+.clinical-v3-page .v3-section {
+  width: 100%;
+  padding: clamp(54px, 5.6vw, 78px) 0;
+  border-bottom: 1px solid var(--line);
+}
+.clinical-v3-page .v3-band-paper {
+  background: var(--paper);
+}
+.clinical-v3-page .v3-band-stone {
+  background: var(--stone);
+}
+.clinical-v3-page .v3-content {
+  max-width: none;
+}
+.clinical-v3-page .v3-content > h2,
+.clinical-v3-page .v3-copy > h2 {
+  max-width: 920px;
+  margin: 0 0 28px;
+  font-size: clamp(2.05rem, 3.15vw, 3.25rem);
+  line-height: 1.07;
+  letter-spacing: -.018em;
+}
+.clinical-v3-page .v3-content > h3,
+.clinical-v3-page .v3-copy > h3 {
+  max-width: 900px;
+  margin: 34px 0 14px;
+  font-size: clamp(1.42rem, 2vw, 2rem);
+  line-height: 1.15;
+}
+.clinical-v3-page .v3-content > h4,
+.clinical-v3-page .v3-copy > h4 {
+  max-width: 900px;
+  margin: 28px 0 12px;
+  font-size: 1.18rem;
+}
+.clinical-v3-page .v3-content > p,
+.clinical-v3-page .v3-copy > p {
+  max-width: 940px;
+  margin: 0 0 17px;
+  font-size: 1.02rem;
+  line-height: 1.76;
+}
+.clinical-v3-page .v3-content a:not(.button),
+.clinical-v3-page .v3-copy a:not(.button) {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+/* Hormone page split sections — About-like treatment, never boxed. */
+.clinical-v3-page .v3-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(360px, .95fr);
+  gap: clamp(44px, 6vw, 86px);
+  align-items: stretch;
+}
+.clinical-v3-page .v3-split-reverse .v3-copy {
+  order: 2;
+}
+.clinical-v3-page .v3-split-reverse .v3-section-image {
+  order: 1;
+}
+.clinical-v3-page .v3-section-image {
+  position: relative;
+  min-height: 420px;
+  margin: 0;
+  overflow: hidden;
+}
+.clinical-v3-page .v3-section-image img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 30%;
+}
+
+/* Document-supplied images: same full content width, no small boxes. */
+.clinical-v3-page .v3-doc-figure {
+  width: 100%;
+  margin: 32px 0 8px;
+  overflow: hidden;
+}
+.clinical-v3-page .v3-doc-figure img {
+  display: block;
+  width: 100%;
+}
+.clinical-v3-page .v3-doc-photo img {
+  height: clamp(320px, 34vw, 470px);
+  object-fit: cover;
+  object-position: center;
+}
+.clinical-v3-page .v3-doc-diagram img {
+  max-height: 520px;
+  object-fit: contain;
+  background: var(--paper);
+}
+
+/* Related source links */
+.clinical-v3-page .v3-related-inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 28px;
+  margin: 22px 0 28px;
+}
+.clinical-v3-page .v3-related-inline a {
+  font-weight: 700;
+}
+
+/* Buttons */
+.clinical-v3-page .v3-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px 18px;
+  margin: 28px 0 10px;
+}
+.clinical-v3-page .v3-button-note {
+  margin: 0 !important;
+  max-width: 620px !important;
+  font-size: .95rem !important;
+  color: var(--muted);
+}
+
+/* FAQ accordion */
+.clinical-v3-page .v3-faq-section {
+  background: var(--stone);
+}
+.clinical-v3-page .v3-faq-item {
+  max-width: 980px;
+  border-top: 1px solid var(--line);
+}
+.clinical-v3-page .v3-faq-item:last-child {
+  border-bottom: 1px solid var(--line);
+}
+.clinical-v3-page .v3-faq-toggle {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 36px;
+  gap: 18px;
+  align-items: center;
+  padding: 22px 0;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+}
+.clinical-v3-page .v3-faq-toggle > span:first-child {
+  font-family: var(--display);
+  font-size: clamp(1.12rem, 1.65vw, 1.34rem);
+  line-height: 1.35;
+}
+.clinical-v3-page .v3-faq-symbol {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  font-size: 1.25rem;
+}
+.clinical-v3-page .v3-faq-answer {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition: grid-template-rows .3s ease, opacity .22s ease;
+}
+.clinical-v3-page .v3-faq-answer > div {
+  overflow: hidden;
+}
+.clinical-v3-page .v3-faq-answer p {
+  max-width: 920px;
+  margin: 0;
+  padding: 0 52px 22px 0;
+  line-height: 1.72;
+}
+.clinical-v3-page .v3-faq-item.is-open .v3-faq-answer {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+
+/* Final booking area: clearly a page section, not footer styling. */
+.clinical-v3-page .v3-cta-section {
+  background: var(--ivory);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding-top: clamp(48px, 5vw, 66px);
+  padding-bottom: clamp(48px, 5vw, 66px);
+}
+.clinical-v3-page .v3-cta-section .v3-content {
+  width: min(calc(100% - (var(--gutter) * 2)), 1180px);
+}
+
+/* Source-gap pages: DESIGN ONLY. Existing copy remains untouched. */
+.clinical-gap-page main > section {
+  width: 100%;
+}
+.clinical-gap-page main > section .container,
+.clinical-gap-page main > section .source-section-inner,
+.clinical-gap-page main > section .split-copy-inner {
+  width: min(calc(100% - (var(--gutter) * 2)), 1180px) !important;
+  max-width: none !important;
+  margin-inline: auto !important;
+}
+.clinical-gap-page main > section:first-child {
+  position: relative;
+  display: grid !important;
+  grid-template-columns: minmax(0,1.08fr) minmax(390px,.92fr);
+  align-items: stretch;
+  min-height: 0 !important;
+}
+.clinical-gap-page main > section:first-child > :not(.v3-gap-hero-image) {
+  min-width: 0;
+}
+.clinical-gap-page .v3-gap-hero-image {
+  position: relative;
+  min-height: 450px;
+  overflow: hidden;
+}
+.clinical-gap-page .v3-gap-hero-image img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 30%;
+}
+.clinical-gap-page main > section:not(:first-child) {
+  padding-top: clamp(50px,5vw,70px) !important;
+  padding-bottom: clamp(50px,5vw,70px) !important;
+}
+.clinical-gap-page main > section:last-child {
+  background: var(--ivory) !important;
+  border-top: 1px solid var(--line) !important;
+  border-bottom: 1px solid var(--line) !important;
+}
+
+/* Tablet */
+@media (max-width: 980px) {
+  .clinical-v3-page .v3-hero {
+    grid-template-columns: minmax(0,1fr) minmax(300px,.75fr);
+  }
+  .clinical-v3-page .v3-split {
+    grid-template-columns: 1fr;
+  }
+  .clinical-v3-page .v3-split-reverse .v3-copy,
+  .clinical-v3-page .v3-split-reverse .v3-section-image {
+    order: initial;
+  }
+  .clinical-v3-page .v3-section-image {
+    min-height: 0;
+    height: min(60vw, 480px);
+  }
+}
+
+/* Mobile */
+@media (max-width: 720px) {
+  .clinical-v3-page .v3-hero,
+  .clinical-gap-page main > section:first-child {
+    display: flex !important;
+    flex-direction: column;
+  }
+  .clinical-v3-page .v3-hero-inner {
+    padding-top: 38px;
+    padding-bottom: 40px;
+  }
+  .clinical-v3-page .v3-hero h1 {
+    font-size: clamp(2.15rem, 9.5vw, 2.9rem);
+  }
+  .clinical-v3-page .v3-hero-image,
+  .clinical-gap-page .v3-gap-hero-image {
+    min-height: 0;
+    height: min(82vw, 410px);
+  }
+  .clinical-v3-page .v3-section {
+    padding-top: 44px;
+    padding-bottom: 44px;
+  }
+  .clinical-v3-page .v3-section h2 {
+    font-size: clamp(1.9rem, 8.3vw, 2.5rem);
+  }
+  .clinical-v3-page .v3-section h3 {
+    font-size: clamp(1.38rem, 6vw, 1.8rem);
+  }
+  .clinical-v3-page .v3-section-image {
+    height: min(84vw, 420px);
+  }
+  .clinical-v3-page .v3-doc-photo img {
+    height: min(72vw, 340px);
+  }
+  .clinical-v3-page .v3-doc-diagram img {
+    max-height: 380px;
+  }
+  .clinical-v3-page .v3-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .clinical-v3-page .v3-actions .button {
+    max-width: 100%;
+    white-space: normal;
+  }
+  .clinical-v3-page .v3-faq-toggle {
+    grid-template-columns: 1fr 32px;
+    gap: 14px;
+    padding: 19px 0;
+  }
+  .clinical-v3-page .v3-faq-answer p {
+    padding-right: 0;
+    padding-bottom: 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .clinical-v3-page .v3-faq-answer {
+    transition: none;
+  }
+}
+
+
+/* SOURCE-GAP PAGE LAYOUT FIX
+   Design only. Existing Birth Control / Endometriosis copy is not rewritten because
+   their canonical Drive documents are inaccessible shortcut targets. */
+
+.clinical-gap-page .page-hero {
+  padding: 0 !important;
+  background: var(--paper) !important;
+  border-bottom: 1px solid var(--line);
+}
+
+.clinical-gap-page .page-hero > .page-hero-grid {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: clamp(46px,5.2vw,70px) var(--gutter) !important;
+  grid-template-columns: 1fr !important;
+  align-content: center;
+}
+
+.clinical-gap-page .page-hero > .page-hero-grid > div:first-child,
+.clinical-gap-page .page-hero > .page-hero-grid > .hero-aside {
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.clinical-gap-page .page-hero .hero-aside {
+  margin-top: 28px !important;
+  padding: 22px 0 0 24px !important;
+  border: 0 !important;
+  border-left: 2px solid var(--umber) !important;
+  background: transparent !important;
+}
+
+.clinical-gap-page main > .section,
+.clinical-gap-page main > section.section {
+  width: 100% !important;
+  padding: clamp(50px,5vw,70px) 0 !important;
+  border-bottom: 1px solid var(--line);
+}
+
+.clinical-gap-page main > .section > .container,
+.clinical-gap-page main > section.section > .container {
+  width: min(calc(100% - (var(--gutter) * 2)), 1180px) !important;
+  max-width: none !important;
+  margin-inline: auto !important;
+}
+
+.clinical-gap-page main .narrow {
+  width: min(calc(100% - (var(--gutter) * 2)), 1180px) !important;
+  max-width: none !important;
+}
+
+.clinical-gap-page main .narrow > * {
+  max-width: 940px;
+}
+
+.clinical-gap-page main .band-dark {
+  background: var(--ivory) !important;
+  color: var(--ink) !important;
+  border-top: 1px solid var(--line) !important;
+  border-bottom: 1px solid var(--line) !important;
+}
+
+.clinical-gap-page main .band-dark h2,
+.clinical-gap-page main .band-dark p {
+  color: var(--ink) !important;
+}
+
+.clinical-gap-page main .band-dark .button {
+  background: var(--ink) !important;
+  color: #fff !important;
+  border-color: var(--ink) !important;
+}
+
+@media (max-width: 720px) {
+  .clinical-gap-page .page-hero > .page-hero-grid {
+    padding-top: 38px !important;
+    padding-bottom: 40px !important;
+  }
+  .clinical-gap-page .page-hero > .page-hero-grid > div:first-child,
+  .clinical-gap-page .page-hero > .page-hero-grid > .hero-aside {
+    max-width: none;
+    margin-inline: 0;
+  }
+}
+
+
+/* ATTACHED-DOC FINAL REFINEMENTS */
+
+.clinical-v3-page .v3-container,
+.clinical-v3-page .v3-content,
+.clinical-v3-page .v3-split,
+.clinical-v3-page .v3-cta-section .v3-content {
+  width: min(calc(100% - (var(--gutter) * 2)), 1180px) !important;
+  max-width: 1180px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Document/source images keep the full image visible. */
+.clinical-v3-page .v3-doc-figure {
+  width: 100% !important;
+  max-width: 1180px !important;
+  margin: 30px 0 10px !important;
+  background: transparent !important;
+}
+.clinical-v3-page .v3-doc-figure img,
+.clinical-v3-page .v3-doc-photo img,
+.clinical-v3-page .v3-doc-diagram img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  max-height: 560px !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  background: transparent !important;
+}
+
+/* About-like split image treatment. */
+.clinical-v3-page .v3-split {
+  align-items: stretch !important;
+}
+.clinical-v3-page .v3-section-image {
+  position: relative !important;
+  align-self: stretch !important;
+  min-height: 430px !important;
+  height: auto !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+}
+.clinical-v3-page .v3-section-image img {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: 50% 28% !important;
+}
+.clinical-v3-page .v3-roadmap-image img {
+  object-position: 50% 24% !important;
+}
+
+.clinical-v3-page .v3-source-marker {
+  display: none;
+}
+.clinical-v3-page .v3-source-list { margin: 20px 0 28px; padding-left: 25px; }
+.clinical-v3-page .v3-source-list li { margin: 8px 0; line-height: 1.6; }
+.clinical-v3-page .v3-content h4 { margin: 26px 0 10px; font-size: 1.28rem; }
+
+.clinical-v3-page .v3-lede {
+  max-width: 900px;
+  margin: 0 0 20px;
+  font-family: var(--display);
+  font-size: clamp(1.35rem,2.15vw,2rem);
+  line-height: 1.35;
+}
+
+.clinical-v3-page .v3-line-list {
+  max-width: 900px;
+  margin: 18px 0 24px;
+}
+.clinical-v3-page .v3-line-list p {
+  margin: 0;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.clinical-v3-page .v3-phase-grid,
+.clinical-v3-page .v3-approach-grid,
+.clinical-v3-page .v3-expect-grid,
+.clinical-v3-page .v3-resource-grid {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 18px;
+  margin-top: 26px;
+}
+.clinical-v3-page .v3-phase-card,
+.clinical-v3-page .v3-approach-card,
+.clinical-v3-page .v3-expect-card,
+.clinical-v3-page .v3-resource-card {
+  padding: 26px 28px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.42);
+}
+.clinical-v3-page .v3-phase-card h3,
+.clinical-v3-page .v3-approach-card h3,
+.clinical-v3-page .v3-expect-card h3,
+.clinical-v3-page .v3-resource-card h3 {
+  margin-top: 0 !important;
+}
+
+.clinical-v3-page .v3-source-cta-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 24px 0 0;
+}
+
+.clinical-v3-page .v3-cta-section {
+  background: var(--stone) !important;
+  color: var(--ink) !important;
+  border-top: 1px solid var(--line) !important;
+  border-bottom: 1px solid var(--line) !important;
+}
+.clinical-v3-page .v3-cta-section h2,
+.clinical-v3-page .v3-cta-section p {
+  color: var(--ink) !important;
+}
+.clinical-v3-page .v3-cta-section .button {
+  background: var(--ink) !important;
+  color: #fff !important;
+  border-color: var(--ink) !important;
+}
+
+/* Long FAQ questions remain consistent with other clinical pages. */
+.clinical-v3-page .v3-faq-question {
+  max-width: 920px;
+}
+
+/* Endometriosis long page: sections remain natural height and full width. */
+.clinical-v3-page.endometriosis-exact-page .v3-section {
+  padding-top: clamp(50px,5vw,72px);
+  padding-bottom: clamp(50px,5vw,72px);
+}
+
+@media (max-width: 980px) {
+  .clinical-v3-page .v3-phase-grid,
+  .clinical-v3-page .v3-approach-grid,
+  .clinical-v3-page .v3-expect-grid,
+  .clinical-v3-page .v3-resource-grid {
+    grid-template-columns: 1fr;
+  }
+  .clinical-v3-page .v3-section-image {
+    min-height: 0 !important;
+    height: min(66vw,480px) !important;
+  }
+}
+
+@media (max-width: 720px) {
+  .clinical-v3-page .v3-doc-figure img,
+  .clinical-v3-page .v3-doc-photo img,
+  .clinical-v3-page .v3-doc-diagram img {
+    max-height: 400px !important;
+  }
+  .clinical-v3-page .v3-section-image {
+    height: min(88vw,420px) !important;
+  }
+  .clinical-v3-page .v3-source-cta-line {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* 2026-11-11 curved visual-system pass.
+   Curves are used on focal media, grouped choices and final actions while
+   long clinical copy remains open and readable. */
+.clinical-v3-page .v3-hero-image {
+  align-self: stretch;
+  min-height: 450px;
+  margin: 26px 28px 0 0;
+  border: 1px solid rgba(85,65,50,.18);
+  border-radius: 240px 240px 0 0;
+  background: var(--stone);
+}
+.clinical-v3-page .v3-section-image {
+  border: 1px solid rgba(85,65,50,.18);
+  border-radius: 220px 220px 14px 14px;
+}
+.clinical-v3-page .v3-phase-card,
+.clinical-v3-page .v3-approach-card,
+.clinical-v3-page .v3-expect-card,
+.clinical-v3-page .v3-resource-card {
+  min-height: 210px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 72px 28px 28px;
+  border-radius: 125px 125px 14px 14px;
+  background: rgba(255,255,255,.58);
+}
+.clinical-v3-page .v3-faq-section .v3-content {
+  padding: clamp(46px,5vw,68px) clamp(26px,5vw,64px) 34px;
+  border: 1px solid rgba(85,65,50,.18);
+  border-radius: 190px 190px 14px 14px;
+  background: rgba(251,250,247,.68);
+}
+.clinical-v3-page .v3-cta-section .v3-content {
+  padding: clamp(58px,6vw,82px) clamp(30px,6vw,78px) clamp(34px,4vw,52px);
+  border: 1px solid rgba(85,65,50,.18);
+  border-radius: 210px 210px 14px 14px;
+  background: var(--paper);
+}
+
+@media (max-width: 980px) {
+  .clinical-v3-page .v3-hero-image { margin-right: 20px; border-radius: 190px 190px 0 0; }
+}
+
+@media (max-width: 720px) {
+  .clinical-v3-page .v3-hero-image {
+    width: calc(100% - 40px);
+    height: min(88vw,410px);
+    margin: 0 20px;
+    border-radius: 170px 170px 0 0;
+  }
+  .clinical-v3-page .v3-section-image { border-radius: 150px 150px 12px 12px; }
+  .clinical-v3-page .v3-phase-card,
+  .clinical-v3-page .v3-approach-card,
+  .clinical-v3-page .v3-expect-card,
+  .clinical-v3-page .v3-resource-card {
+    min-height: 190px;
+    padding: 62px 24px 24px;
+    border-radius: 105px 105px 12px 12px;
+  }
+  .clinical-v3-page .v3-faq-section .v3-content,
+  .clinical-v3-page .v3-cta-section .v3-content {
+    padding: 58px 24px 28px;
+    border-radius: 125px 125px 12px 12px;
+  }
+}
